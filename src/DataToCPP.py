@@ -1,0 +1,2 @@
+class DataCPPConverter(object):
+    pass
