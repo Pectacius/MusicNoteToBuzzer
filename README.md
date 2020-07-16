@@ -1,4 +1,4 @@
-# Music Score Generator for Buzzers on Arduino
+# Music Score Generator for Piezo Buzzer
 ## Description:
 Allows a music score to be played on an Arduino buzzer. 
 Converts a music score to buzzer frequencies and duration. Music score is converted to the
