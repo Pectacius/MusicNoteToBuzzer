@@ -13,3 +13,9 @@ Converts a music score to buzzer frequencies and duration. Music score is conver
 3. Generates a `.cpp` file with music score generated in `void play()` method
 
 ## Music score input guide
+ - Basic structure `<note>` `<octave>` `<flat, sharp (optional)>`
+ - input slurs as separate notes (buzzer cannot slur notes)
+ - input ties in on row, separate the notes with a "+"
+ - input &#9837; as b
+ - input &#9839; as #
+ - Example: "middle c" would appear as `C4`

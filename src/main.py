@@ -1,6 +1,8 @@
 import sys
 import getopt
 from utils import ROOT_DIR
+from MusicToData import MusicDataConverter
+from DataToCPP import DataCPPConverter
 
 
 class InvalidArgument(Exception):
@@ -13,7 +15,7 @@ if __name__ == "__main__":
     short_options = "b:n:d:"
     long_options = ["bpm=", "file_name=", "file_dir="]
 
-    bpm = 60
+    bpm = 100
     file_name = 'music_score'
     file_dir = '{}\\data'.format(ROOT_DIR)
 
@@ -40,4 +42,11 @@ if __name__ == "__main__":
             print("Not a valid number")
             sys.exit(2)
 
-    
+    music_converter = MusicDataConverter(bpm)
+    music_converter.open_files()
+    music_writer = DataCPPConverter(music_converter.LIST_OF_NOTES, file_name, file_dir)
+    music_writer.initialize_cons()
+    music_writer.initialize_play()
+    music_writer.initialize_setup()
+    music_writer.initialize_loop()
+    music_writer.create_file()

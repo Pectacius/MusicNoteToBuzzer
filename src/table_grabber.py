@@ -5,7 +5,7 @@ from utils import ROOT_DIR
 
 
 # class with static methods to extract tables with one header from html to dataframe
-class HTMLTableParser(object):
+class HTMLTableParser:
     # gets html from url, breaks content into table(s), returns as list
     @staticmethod
     def parse_url(url):
